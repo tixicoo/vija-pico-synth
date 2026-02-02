@@ -969,11 +969,6 @@ void loop1() {
         color_in = smoothM;
       }
 
-    
-      // --- decay CV influence smoothly ---
-      // timb_mod_cv  *= 0.9f;
-      // color_mod_cv *= 0.9f;
-
       engine_updated = true;
     }
 
