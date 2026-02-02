@@ -1,7 +1,9 @@
 # VIJA (v1.0)
 
 Raspberry PICO digital synthesizer based on **Mutable Instruments Braids** macro oscillator 
-in semi-modular format.
+in semi-modular format.  
+
+🎥 [Watch demo](https://www.youtube.com/watch?v=sYbr-VH2LuQ)
 
 ---
 
