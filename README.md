@@ -1,4 +1,4 @@
-# VIJA (v1.1)
+# VIJA synthesizer
 
 Raspberry PICO digital synthesizer based on **Mutable Instruments Braids** macro oscillator 
 in semi-modular format.  
@@ -146,5 +146,5 @@ Connect your MIDI Jack via a 6N138 optocoupler circuit to **GP13 (Pin 17)**.
   
 ---
 ##  Version history
-* 2026-02-03 - v.1.1
-* 2026-02-02 - First release v.1.0
+* 2026-02-03 - v1.0.1
+* 2026-02-02 - First release v1.0
