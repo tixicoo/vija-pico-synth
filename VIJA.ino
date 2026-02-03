@@ -26,7 +26,7 @@
           - Sample rate: 32000 (4 voices) / 44100 (3 voices)  
   RP2350:
          - Optimize: Fast (-Ofast)
-         - Sample rate 48000
+         - Sample rate: 48000
   
   Software:
  - BRAIDS and STMLIB libraries ported by Mark Washeim:
