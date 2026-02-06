@@ -93,7 +93,7 @@ VIJA responds to the following Control Change (CC) messages on the selected MIDI
  
 - Adafruit TinyUSB
 
-- Adafruit SSD1306
+- Adafruit SSD1306 or SH110X (check code branch)
 
 - LittleFS  & ArduinoJson for saving settings
 
