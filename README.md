@@ -97,12 +97,16 @@ VIJA responds to the following Control Change (CC) messages on the selected MIDI
 
 - LittleFS  & ArduinoJson for saving settings
 
-3.  **Compilation Settings:**  
+3.  **Compilation Settings:**
+
+   Enable flash file system for saving menu settings:
+     - Flash size: "2MB (Sketch:1MB, FS:1MB)"
+     
    * **RP2040:**
               - Optimize: Fast (-Ofast)    
               - CPU Speed: 200-240mhz (Overclock) depending on the sample rate and needed voice count   
               - Sample rate: 32000 (4 voices) / 44100 (3 voices)  
-   * **RP2350:**  
+   * **RP2350:**
               - Optimize: Fast (-Ofast)  
               - Sample rate: 48000
 ---
