@@ -517,7 +517,7 @@ void drawEngineUI() {
 }
 
 
-void drawArtisticSplash() {
+void drawSplash() {
 
   display.clearDisplay();
   display.drawBitmap((128 - 32) / 2, 0, waveform_bitmap, 32, 16, SSD1306_WHITE);
@@ -534,7 +534,7 @@ void drawArtisticSplash() {
   display.getTextBounds(subtitle, 0, 0, &x1, &y1, &w, &h);
   display.setCursor((128 - w) / 2, 40);
   display.println(subtitle);
-  const char *version = "v1.0";
+  const char *version = "v1.0.1";
   display.getTextBounds(version, 0, 0, &x1, &y1, &w, &h);
   display.setCursor((128 - w) / 2, 54);
   display.println(version);
@@ -870,7 +870,7 @@ void setup1() {
 
 #if USE_SCREEN
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
-  drawArtisticSplash();
+  drawSplash();
   delay(4000);
   display.clearDisplay();
   display.display();
