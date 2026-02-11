@@ -98,9 +98,9 @@ VIJA responds to the following Control Change (CC) messages on the selected MIDI
 - LittleFS  & ArduinoJson for saving settings
 
 3.  **Compilation Settings:**
-
-   Enable flash file system for saving menu settings:
-     - Flash size: "2MB (Sketch:1MB, FS:1MB)"
+   
+   - Enable flash file system for saving menu settings:  
+     Flash size: "2MB (Sketch:1MB, FS:1MB)"
      
    * **RP2040:**
               - Optimize: Fast (-Ofast)    
